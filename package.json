@@ -1,9 +1,32 @@
 {
 	"name": "create-pull-request",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Creates a pull request for changes to your repository in the actions workspace",
+	"keywords": [
+		"codeeditorland",
+		"land",
+		"playform"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/CreatePullRequest#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/CreatePullRequest/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/CreatePullRequest.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Source 🖋️ Open 👐🏻",
+		"email": "Source/Open@Editor.Land",
+		"url": "HTTPS://Editor.Land"
+	},
+	"type": "module",
 	"main": "lib/main.js",
 	"scripts": {
 		"build": "tsc && ncc build",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
 		"test:int": "__test__/integration-tests.sh",
 		"test:unit": "jest unit"
 	},
@@ -16,8 +39,12 @@
 		"uuid": "11.1.0"
 	},
 	"devDependencies": {
+		"@playform/build": "0.2.1",
 		"@types/node": "22.13.10",
 		"@vercel/ncc": "0.38.3",
 		"js-yaml": "4.1.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }

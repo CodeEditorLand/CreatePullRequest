@@ -1,14 +1,25 @@
 {
 	"compilerOptions": {
-		"target": "es6",
-		"module": "commonjs",
-		"lib": ["es6"],
-		"outDir": "./lib",
-		"rootDir": "./src",
+		"baseUrl": "./",
 		"declaration": true,
-		"strict": true,
+		"esModuleInterop": true,
+		"lib": [
+			"es6"
+		],
+		"module": "commonjs",
 		"noImplicitAny": false,
-		"esModuleInterop": true
+		"outDir": "Target",
+		"rootDir": "src",
+		"strict": true,
+		"target": "es6"
 	},
-	"exclude": ["__test__", "lib", "node_modules"]
+	"exclude": [
+		"__test__",
+		"lib",
+		"node_modules"
+	],
+	"extends": "@playform/build/tsconfig",
+	"include": [
+		"src"
+	]
 }
